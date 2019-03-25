@@ -42,6 +42,9 @@ public class CreateServlet extends HttpServlet {
 	        m.setCreated_at(currentTime);
 	        m.setUpdated_at(currentTime);
 
+	        String content = request.getParameter("content");
+	        m.setContent(content);
+
 	        em.getTransaction().begin();
 	        em.persist(m);
 	        em.getTransaction().commit();
