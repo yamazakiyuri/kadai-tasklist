@@ -5,8 +5,8 @@
         <c:choose>
             <c:when test="${task != null}">
         <h2>ID : ${task.id} のタスク編集ページ</h2>
-
         <form method="POST" action="${pageContext.request.contextPath}/update">
+
             <label for="content">タスク</label><br />
             <input type="text" name="content" value="${task.content}" />
             <br /><br />

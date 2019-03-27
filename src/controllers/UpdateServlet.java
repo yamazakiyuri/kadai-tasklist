@@ -45,6 +45,7 @@ public class UpdateServlet extends HttpServlet {
 	        String content = request.getParameter("content");
 	        m.setContent(content);
 
+
 	        em.getTransaction().begin();
 	        em.getTransaction().commit();
 	        request.getSession().setAttribute("flush", "タスクを更新しました。");
@@ -53,8 +54,6 @@ public class UpdateServlet extends HttpServlet {
 	        request.getSession().removeAttribute("task_id");
 
 	        response.sendRedirect(request.getContextPath() + "/index");
-
+	       }
 	    }
 	}
-
-}

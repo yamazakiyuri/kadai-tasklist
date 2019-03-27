@@ -45,6 +45,7 @@ public class CreateServlet extends HttpServlet {
 	        String content = request.getParameter("content");
 	        m.setContent(content);
 
+
 	        em.getTransaction().begin();
 	        em.persist(m);
 	        em.getTransaction().commit();
@@ -52,8 +53,7 @@ public class CreateServlet extends HttpServlet {
 	        em.close();
 
 	        response.sendRedirect(request.getContextPath() + "/index");
-
 	    }
 	}
-
 }
+
